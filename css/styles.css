@@ -10,11 +10,11 @@
   --filter-background-color: #f5f4fa;
   --hero-button-accent-color: #188ce8;
   --footer-address-link: rgba(255, 255, 255, 0.6);
+  --header-border-color: #d9d9d9;
 }
 
 html {
   box-sizing: border-box;
-  width: 1600px;
 }
 
 *,
@@ -40,6 +40,12 @@ p {
   margin-bottom: 0px;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .link {
   text-decoration: none;
   letter-spacing: 0.03em;
@@ -53,6 +59,7 @@ p {
 
 .header {
   background-color: var(--main-background-color);
+  border-bottom: 1px solid var(--header-border-color);
 }
 
 .container {
@@ -242,26 +249,30 @@ p {
 }
 
 .team {
-  background-color: #f5f4fa;
+  background-color: var(--filter-background-color);
 }
+
 .team .list {
   display: flex;
 }
 
-.team .item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .team .item {
-  padding-bottom: 30px;
   background-color: var(--main-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
+.team .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team .team-info {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .team .member-title {
-  margin-top: 30px;
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -325,7 +336,15 @@ p {
 
 /* Portfolio styles */
 
+.examples .filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
 .filters .filter-item {
+  display: block;
+  padding: 6px 21px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
@@ -334,6 +353,10 @@ p {
   font-family: inherit;
   border: none;
   cursor: pointer;
+}
+
+.filters .item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .filters .filter-item:hover,
@@ -345,12 +368,33 @@ p {
   border-radius: 4px;
 }
 
-.examples .list-item {
+.examples .cards {
+  display: flex;
   background-color: var(--second-text-color);
-  border: 1px solid #eeeeee;
+  flex-wrap: wrap;
 }
 
-.examples .list-item__title {
+.examples .card {
+  width: 370px;
+  border: 1px solid #eeeeee;
+  margin-right: 30px;
+}
+
+.examples .card:nth-child(3n) {
+  margin-right: 0px;
+}
+
+.examples .card:nth-child(-n+6) {
+  margin-bottom: 30px;
+}
+
+.examples .card-info {
+  padding-left: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.examples .card-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -358,7 +402,7 @@ p {
   color: var(--title-text-color);
 }
 
-.examples .list-item__text {
+.examples .card-text {
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.03em;
