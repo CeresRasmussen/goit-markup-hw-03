@@ -10,7 +10,7 @@
   --filter-background-color: #f5f4fa;
   --hero-button-accent-color: #188ce8;
   --footer-address-link: rgba(255, 255, 255, 0.6);
-  --header-border-color: #d9d9d9;
+  --header-border-color: #ececec;
 }
 
 html {
@@ -184,6 +184,7 @@ img {
   color: var(--second-text-color);
   background-color: var(--accent-text-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -339,13 +340,13 @@ img {
 
 /* Portfolio styles */
 
-.examples .filters {
+.filters {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-.filters .filter-item {
+.filter-item {
   display: block;
   padding: 6px 21px;
   font-weight: 500;
@@ -358,12 +359,12 @@ img {
   cursor: pointer;
 }
 
-.filters .item:not(:last-child) {
+.item:not(:last-child) {
   margin-right: 8px;
 }
 
-.filters .filter-item:hover,
-.filters .filter-item:focus {
+.filter-item:hover,
+.filter-item:focus {
   background-color: var(--accent-text-color);
   color: var(--second-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -371,33 +372,29 @@ img {
   border-radius: 4px;
 }
 
-.examples .cards {
+.cards {
+  outline: 1px solid red;
   display: flex;
   background-color: var(--second-text-color);
   flex-wrap: wrap;
+  margin-bottom: -30px;
+  margin-left: -30px;
 }
 
-.examples .card {
-  width: 370px;
-  border: 1px solid #eeeeee;
-  margin-right: 30px;
-}
-
-.examples .card:nth-child(3n) {
-  margin-right: 0px;
-}
-
-.examples .card:nth-child(-n + 6) {
+.card {
+  outline: 1px solid gold;
+  flex-basis: calc(100% / 3 - 30px);
+  /* border: 1px solid #eeeeee; */
   margin-bottom: 30px;
+  margin-left: 30px;
 }
 
-.examples .card-info {
-  padding-left: 24px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+.card-info {
+  padding: 20px 24px;
 }
 
-.examples .card-title {
+.card-title {
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -405,7 +402,7 @@ img {
   color: var(--title-text-color);
 }
 
-.examples .card-text {
+.card-text {
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.03em;
