@@ -373,7 +373,6 @@ img {
 }
 
 .cards {
-  outline: 1px solid red;
   display: flex;
   background-color: var(--second-text-color);
   flex-wrap: wrap;
@@ -382,9 +381,8 @@ img {
 }
 
 .card {
-  outline: 1px solid gold;
   flex-basis: calc(100% / 3 - 30px);
-  /* border: 1px solid #eeeeee; */
+  border: 1px solid #eeeeee;
   margin-bottom: 30px;
   margin-left: 30px;
 }
